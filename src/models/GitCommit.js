@@ -88,7 +88,11 @@ export class GitCommit {
     let obj = {
       parent: []
     }
+
+    console.log('ABOUT TO PROCESS HEADERS')
     for (let h of hs) {
+      console.log('PROCESSiNG', h)
+      console.log(hs)
       let key = h.slice(0, h.indexOf(' '))
       let value = h.slice(h.indexOf(' ') + 1)
       if (Array.isArray(obj[key])) {
